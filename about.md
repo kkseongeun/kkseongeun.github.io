@@ -1,17 +1,12 @@
 ---
-layout: page
-title: About
+
+layout: page title: About
+
 permalink: /about/
----
+------------------
 
-<img src="{{ site.baseurl }}/assets/profile-placeholder.gif" title="Profile Picture" class="profile">
+<img src="{{ site.baseurl }}/assets/profile.jpg" title="Profile Picture" class="profile">
 
-Centrarium is a custom theme for Jekyll, made by [Ben Centra][bencentra] for his own blog. He'd be humbled if you liked it enough to use it as well! Installation and configuration instructions can be found in the [GitHub repository](https://github.com/bencentra/centrarium).
+웹과 앱 환경에 서비스를 기획하는 것이 즐거운 김성은입니다.
 
-This page is a good place to write about yourself, your project, your product, or whatever it is your site is for. You can replace the image above, or you can get rid of it entirely. 
-
-You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/). And you can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
-
-[centrarium]: https://github.com/bencentra/centrarium
-[bencentra]: http://bencentra.com
-[jekyll]: https://github.com/jekyll/jekyll
+신입으로 서비스기획자가 된다는 것은 어렵다는 것을 잘 압니다. 그래서 저는 학교와 책에 의한 배움보다는 실제 현장에 뛰어들어 기획을 배우게 되었고, 저 스스로 다양한 가치를 터득하기 위해 노력했습니다. 이 블로그는 저의 경험과 고민을 표현하는 공간입니다.
