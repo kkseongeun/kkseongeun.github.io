@@ -1,74 +1,51 @@
 ---
+
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2015-04-18 08:43:59
-author: Ben Centra
-categories: Jekyll
-tags:	jekyll welcome
-cover:  "/assets/instacode.png"
----
+title: "다시 돌아온 깃허브 블로그"
+date: 2019-03-14
+author: Seong eun
+categories: Github
+tags: github blog
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+cover: "/assets/instacode.png"
+------------------------------
 
-## Adding New Posts
+애증의 `깃허브`.. 대학교 때 오픈소스를 배우며 깃허브를 알게 되었고 깃허브로 프로젝트 정리하면 좋겠다 싶었다. 글쓰는 걸 좋아하는 나는 깃허브 블로그를 만들어볼까? 고민만 하다가 인턴하며 만난 동기언니에게 영업당해 깃허브블로그를 시작했었다. 그런데 이런 저런 핑계로 블로그 업데이트를 미루다가.. 혼자 워드프레스도 갔다가 티스토리도 갔다가.. 결국 다시 돌아온 깃허브 블로그.. 대신 테마는 싹 바꿨다!
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+주소는 그대로! 블로그 생김새는 바꿀래요.
+----------------
 
-### Tags and Categories
+주소는 그대로 쓰고 싶은데 이전 지킬테마가 마음에 들지 않아 새로 바꾸고 싶었다. 이 때부터 나의 삽질은 시작되었다.
 
-If you list one or more categories or tags in the front matter of your post, they will be included with the post on the page as links. Clicking the link will bring you to an auto-generated archive page for the category or tag, created using the [jekyll-archive][jekyll-archive] gem.
+### 처음 내가 한 것
+1. 기존 저장소 삭제(^^)
+2. 마음에 드는 지킬 테마 `fork`
+3. 저장소 이름 다시 설정
+4. `clone`
 
-### Cover Images
+휴 여기서 문제! 저장소 이름(주소)을 다시 설정하는데 원래 있는 이름이라며 짠 하고 블로그의 테마가 수정되지 않았다. 이것 저것 하다보니 반영이 되었는데, 생각해보면 반영되는데 시간이 걸린 것 같기도 하다.
+(새로운 테마는 [centrarium](http://jekyllthemes.org/themes/centrarium/))
 
-To add a cover image to your post, set the "cover" property in the front matter with the relative URL of the image (i.e. <code>cover: "/assets/cover_image.jpg"</code>).
+### css가 왕창 깨졌어요
+(깨진 이미지 첨부 assets에 있음)
+퍼블리싱 되긴 했는데 css가 왕창 깨져버려서 멘붕이 왔다. css가 왜 깨졌을까 찾아보니 `fork`하면서 경로가 달라질 수도 있다고 한다. 그래서 바로 확인해봤다.
 
-### Code Snippets
+(개발자도구 에러 이미지)
+크롬 개발자도구로 확인을 해보니 빨간 에러 투성이.
+나에게 이러지 말아요..
+에러를 파헤쳐보자!
 
-You can use [highlight.js][highlight] to add syntax highlight code snippets:
+(하이퍼링크 캡쳐 이미지)
+- **문제점** : 개발자도구에서는 main.css가 centrarium/css 두 단계에 걸쳐서 있는데 내 깃허브에는 그냥 css 폴더 밑에 바로 파일이 있었다.
+나는 centrarium 파일이 쭉 없을 것이기 때문에 수정이 필요하다.
 
-Use the [Liquid][liquid] `{% raw %}{% highlight <language> %}{% endraw %}` tag to add syntax highlighting to code snippets.
+- **해결방법** : 저장소의 _config.yml 에서 baseurl을 찾아 /centrarium 을 지워준 후 commit !
 
-For instance, this template...
-{% highlight html %}
-{% raw %}{% highlight javascript %}    
-function demo(string, times) {    
-  for (var i = 0; i < times; i++) {    
-    console.log(string);    
-  }    
-}    
-demo("hello, world!", 10);
-{% endhighlight %}{% endraw %}
-{% endhighlight %}
 
-...will come out looking like this:
+### _config 파일 바꾸기
 
-{% highlight javascript %}
-function demo(string, times) {
-  for (var i = 0; i < times; i++) {
-    console.log(string);
-  }
-}
-demo("hello, world!", 10);
-{% endhighlight %}
+우리가 앞으로 작업하기 위해 `clone` 해 온 폴더를 보면, `_config`라는 YML파일이 있다. 이 파일은 블로그 테마의 전반적인 정책(?!)을 약속해놓은 파일인데 앞으로 많이 손댈 파일이다. 직관적으로 알아보기 쉬운 파일이라 수정하는데 어렵지는 않다.
+가장 먼저 바꿔준 것은 `Site settings` 영역이다. 여기에는 `title`, `subtitle`, `name` 등 기본적인 네이밍 설정을 하는 것들이 포함되어 있다. 뿐만 아니라 카테고리나 사이트 내 소개 이미지 등의 설정을 변경할 수 있으니 꼼꼼히 살펴보는 것이 좋다.
 
-Syntax highlighting is done using [highlight.js][highlight]. You can change the active theme in [head.html](https://github.com/bencentra/centrarium/blob/2dcd73d09e104c3798202b0e14c1db9fa6e77bc7/_includes/head.html#L15).
 
-### Images
 
-Lightbox has been enabled for images. To create the link that'll launch the lightbox, add <code>data-lightbox</code> and <code>data-title</code> attributes to an <code>&lt;a&gt;</code> tag around your <code>&lt;img&gt;</code> tag. The result is:
-
-<a href="//bencentra.com/assets/images/falcon9_large.jpg" data-lightbox="falcon9-large" data-title="Check out the Falcon 9 from SpaceX">
-  <img src="//bencentra.com/assets/images/falcon9_small.jpg" title="Check out the Falcon 9 from SpaceX">
-</a>
-
-For more information, check out the [Lightbox][lightbox] website.
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
-[highlight]:   https://highlightjs.org/
-[lightbox]:    http://lokeshdhakar.com/projects/lightbox2/
-[jekyll-archive]: https://github.com/jekyll/jekyll-archives
-[liquid]: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
