@@ -1,4 +1,4 @@
-# External gems
+﻿# External gems
 # See http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html for making `jekyll archives` work.
 gems:
   - jekyll-archives # Sorry, not GitHub pages friendly!
@@ -7,6 +7,10 @@ gems:
 
 exclude:
   - "/vendor/"
+
+# disqus
+disqus_url: kkseongeun@gmail.com
+disqus_id: kkseongeun
 
 # Site settings
 title: SEONGEUN_Log
@@ -195,3 +199,5 @@ protocols:
     os_repo: "https://github.com/bencentra/centrarium.com"
     os_rcs_type: "git"
     os_src: "git@github.com:bencentra/centrarium.com.git"
+
+
