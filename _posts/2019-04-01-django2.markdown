@@ -15,8 +15,8 @@ cover: "/assets/instacode.png"
 
 `python manage.py startapp blog` 로 blog라는 앱을 만들고 `dir` 명령어로 확인해준다.  
 
-** 가장 큰 폴더인 start_django 라는 폴더는 프로젝트의 기본 폴더이며, 이 폴더 안에 blog라는 app이 존재하는 것**  
-**큰 폴더 안에 들어있는 start_django라는 하위폴더는 프로젝트 전체에 대한 설정 파일들이 담겨있는 것 **
+**가장 큰 폴더인 start_django 라는 폴더는 프로젝트의 기본 폴더이며, 이 폴더 안에 blog라는 app이 존재하는 것**  
+**큰 폴더 안에 들어있는 start_django라는 하위폴더는 프로젝트 전체에 대한 설정 파일들이 담겨있는 것**
 
 ---
 
@@ -66,7 +66,7 @@ def index(request):
 ---
 
 ### 작은 팁
-**cmd 명령어***
+**cmd 명령어**
 - cd : 폴더 이동
 - dir : 폴더 확인
 
