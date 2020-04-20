@@ -14,7 +14,7 @@ disqus_id: kkseongeun
 
 # Site settings
 title: SEONGEUN_Log
-subtitle: "예비서비스기획자의 공부기록(기획/분석/프로그래밍)"
+subtitle: "IT 서비스기획자의 공부기록(기획/분석/프로그래밍)"
 email: kkseongeun@gmail.com
 name: Seong eun Kim
 description: >
@@ -199,5 +199,3 @@ protocols:
     os_repo: "https://github.com/bencentra/centrarium.com"
     os_rcs_type: "git"
     os_src: "git@github.com:bencentra/centrarium.com.git"
-
-
