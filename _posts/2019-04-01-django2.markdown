@@ -6,7 +6,6 @@ date: 2019-04-01
 author: Seong eun
 categories: django
 tags: django python
-cover: "/assets/instacode.png"
 ---
 
 ### App 만들기
