@@ -1,0 +1,13 @@
+I"�<h3 id="django-설치--장고프로젝트-시작하기">django 설치 + 장고프로젝트 시작하기</h3>
+<p>cmd에서 설치하기</p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">python --version</code> 으로 파이썬 버전 확인하기 -&gt; 3.x버전 이상!</li>
+  <li><code class="language-plaintext highlighter-rouge">pip install django</code> 로 장고 설치하기</li>
+  <li><code class="language-plaintext highlighter-rouge">django-admin startproject start_django</code> 장고프로젝트를 만들어주는데 <code class="language-plaintext highlighter-rouge">dir</code>로 확인해보면 start_django 폴더가 생겼을 것!</li>
+  <li><code class="language-plaintext highlighter-rouge">cd start_django</code> 로 폴더 안에 들어가 또 <code class="language-plaintext highlighter-rouge">dir</code>로 확인해보면 manage.py 파일이 있을 것!</li>
+  <li><code class="language-plaintext highlighter-rouge">python manage.py runserver</code> 로 서버를 돌려 정상적으로 프로젝트가 실행되는지 확인해볼 것.</li>
+  <li>브라우저 주소창에 127.0.0.1:8000 또는 localhost:8000 를 쳐서 귀여운 로켓화면이 뜨면 성공~!</li>
+</ol>
+
+:ET

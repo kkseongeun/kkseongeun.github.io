@@ -13,16 +13,16 @@ disqus_url: kkseongeun@gmail.com
 disqus_id: kkseongeun
 
 # Site settings
-title: SEONGEUN_Log
-subtitle: "IT 서비스기획자의 공부기록(기획/분석/프로그래밍)"
-email: kkseongeun@gmail.com
-name: Seong eun Kim
-description: >
+title: SEONGEUN_Log #메인 타이틀
+subtitle: "IT 서비스기획자의 공부와 고민거리 기록하기" #타이틀 아래에 나오는 문구
+email: kkseongeun@gmail.com 
+name: Seongeun Kim
+description: 
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
 baseurl:  # the subpath of your site, e.g. /blog/
-url: "http://kkseongeun.github.io" # the base hostname & protocol for your site
+url: "http://kkseongeun.github.io" #깃허브블로그 호스트 주소
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.png"
 
@@ -96,8 +96,8 @@ social:
 
   - name: LinkedIn
     icon: linkedin
-    username: Ben Centra
-    url:
+    username: seongeun kim
+    url: www.linkedin.com/in/kkseongeun
     desc: Connect with me on LinkedIn
     share: false
 

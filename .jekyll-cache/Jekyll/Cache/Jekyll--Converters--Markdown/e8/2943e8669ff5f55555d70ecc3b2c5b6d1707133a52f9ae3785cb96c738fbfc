@@ -1,0 +1,18 @@
+I"C<p>이제는 손에 익었지만 혹시 모르니까 기록하는 글이다. 깃 명령어를 이용해 웹에 <code class="language-plaintext highlighter-rouge">push</code>하는 방법!</p>
+
+<h2 id="기본적인-깃-명령어">기본적인 깃 명령어</h2>
+
+<h3 id="first-commit">First commit</h3>
+<p>$ git remote add origin https://kkseongeun.github.io<br />
+$ git add .<br />
+$ git commit -m “Initialize Blog”<br />
+$ git push</p>
+
+<h3 id="modified">modified</h3>
+<p>$ git status<br />
+$ git add .<br />
+$ git status<br />
+$ git commit -m “ “<br />
+$ git push</p>
+
+:ET
