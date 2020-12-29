@@ -36,11 +36,13 @@ $red:	#c0392b;				// Pomegranate
 $gray: #7f8c8d;				// Asbestos
 // Even more colors
 $bc-red: #bc0000;
+$seongeun-footer: #3d3d3d;
+$seongeun-point: #e6a64e;
 
 // Font Colors
 $base-background-color: #fff;
 $base-font-color: $dark-gray;
-$action-color: $blue;
+$action-color: $seongeun-footer;
 $highlight-color: tint($action-color, 33%);
 
 // Border
