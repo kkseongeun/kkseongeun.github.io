@@ -1,20 +1,100 @@
 ---
 
 layout: post
-title: "다시 돌아온 깃허브 블로그"
-date: 2019-03-14
-author: Seong eun
+title: "진짜진짜 다시 돌아온 깃허브 블로그"
+date: 2020-12-30
 categories: Github
-tags: github blog
-cover: "/assets/instacode.png"
+tags: github blog jekyll
+
 ---
 
-애증의 `깃허브`.. 대학교 때 오픈소스를 배우며 깃허브를 알게 되었고 깃허브로 프로젝트 정리하면 좋겠다 싶었다. 글쓰는 걸 좋아하는 나는 깃허브 블로그를 만들어볼까? 고민만 하다가 인턴하며 만난 동기언니에게 영업당해 깃허브블로그를 시작했었다. 그런데 이런 저런 핑계로 블로그 업데이트를 미루다가.. 혼자 워드프레스도 갔다가 티스토리도 갔다가.. 결국 다시 돌아온 깃허브 블로그.. 대신 테마는 싹 바꿨다!
+애증의 이 깃허브 블로그.. 대학교 때 오픈소스 가지고 코딩하는 수업이 있었는데 그 때 좀 건들다가 방치하고, 취업 전에 포트폴리오 겸 공부 블로그로 써야지 했다가 덜컥 취업해버리고..
+그리고 맥북으로 노트북을 바꾸며 다시 환경을 갖추기로 마음 먹고 시작해본다. GO!!
 
-주소는 그대로! 블로그 생김새는 바꿀래요.
+## 1. 개념정리
+1. `github`  
+    개발자가 사용하는 버전관리 및 협업툴
+
+2. `github page`  
+    github 저장소의 내용을 웹페이지로 구축해주는 서비스로, github 사용자들은 저장소에 push함으로써 누구나 간단하게 고유한 웹사이트 한 개를 가질 수 있다.
+
+3. `jekyll`  
+    루비 기반의 정적인 웹사이트 생성기로, 쉽게 말해 html이나 markdown 파일을 읽고 웹사이트를 생성해준다. 단, 정적인 웹사이트이기 때문에 데이터베이스 등은 사용할 수 없지만 무료로 호스팅을 제공한다는 것이 굉장히 장점이 된다. 특히, 테마가 다양하여 마음에 드는 테마를 fork해서 커스터마이징하면 된다.
+
+4. `ruby`  
+    루비는 동적 객체 지향 스크립트 언어이다. 지킬이 루비로 작성되어 있기 때문에 로컬 개발 환경을 위해서는 루비 설치가 필요하다. 맥에는 루비가 설치되어 있기 때문에 버전을 확인하고 업데이트된 루비 버전을 설치해주면 된다.
+    - `Gem` : rubygems는 루비 패키지 관리자이고, 각 패키지를 gem 이라고 한다. 깃허브 블로그를 위해 설치할 수 있는 gem은 jekyll, bundler, github-page이다.
+  
+---  
+
+## 2. 과정
+아래 과정은 터미널에서 순차적으로 실행하면 됩니다요.
+
+#### 1. 깃허브 저장소 만들기
+   깃허브에 들어가서 계정을 만들고 저장소를 만든다.  
+   1) repository name은 (username).github.io 로 되어 있다.  
+   2) 생성된 repository에서 setting > github page 영역에서 "Your site is published at https://(username).github.io/" 라고 표시되어 초록색 체크까지 보이면 성공
+
+#### 2. ruby 설치
+   mac은 기본적으로 루비가 설치되어 있지만 루비 버전이 낮아서 루비를 업데이트 해주거나 버전관리도구인 rbenv를 사용해준다.  
+   1) Homebrew 설치  
+   https://brew.sh/ 에서 Install Homebrew 확인하여 Homebrew 설치  
+   2) rbenv 설치  
+   ```
+   $ brew install rbenv
+   $ rbenv init
+   ```
+   brew install rbenv 은 자동으로 ruby-build를 같이 설치해주고, 이것으로 다른 루비 버전을 설치해줄 수 있다.
+
+   ```
+   export PATH="$HOME/.rbenv/bin:$PATH"
+   eval "$(rbenv init -)"
+   ```
+   zsh을 쓰는 경우 ~/.zshrc, 기본 bash를 쓰는 경우 ~/.bash_profile에 작성한다.
+
+   ```
+   $ rbenv install (버전)
+   $ rbenv global (버전)
+   $ rbenv versions
+   ```
+   최신버전을 확인해 설치하고 rbenv versions을 입력하여 설치된 버전을 확인한다.
+
+   ```
+   $ rbenv rehash
+   ```
+   rehash는 rbenv가 관리하는 루비 명령어들을 셸 스크립트 파일로 옮겨주는 역할을 한다.
+
+#### 3. jekyll과 bundler 설치
+   ```
+   $ gem install jekyll bundler
+   $ bundle update
+   $ bundle install
+   ```
+
+#### 4. 로컬 서버에서 확인해보기
+   ```
+   $ jekyll serve
+   ```
+   - jekyll serve 하고 config.yml 파일을 로컬에서 확인할 경우 종료 후 다시 실행해야 반영됨
+   - jekyll serve  종료 방법은 ctrl + C
+  
+#### 5. jekyll 테마 선정
+   http://jekyllthemes.org/ 에서 테마를 선정하고 해당 테마를 clone or download 한다. 그러면, 해당 테마 소스 폴더가 생기는데 터미널에서는 해당 폴더로 이동하여 깃 명령어로 배포하면 된다. 
+
+#### 6. 배포하기
+   ```
+   $ cd kkseongeun.github.io
+   $ git init
+   $ git add .
+   $ git git status
+   $ git commit -m "commit message"
+   $ git push
+   ```
+   
 ----------------
 
-주소는 그대로 쓰고 싶은데 이전 지킬테마가 마음에 들지 않아 새로 바꾸고 싶었다. 이 때부터 나의 삽질은 시작되었다.
+
+<!--주소는 그대로 쓰고 싶은데 이전 지킬테마가 마음에 들지 않아 새로 바꾸고 싶었다. 이 때부터 나의 삽질은 시작되었다.
 
 ### 처음 내가 한 것
 1. 기존 저장소 삭제(^^)
@@ -44,7 +124,7 @@ cover: "/assets/instacode.png"
 ### _config 파일 바꾸기
 
 우리가 앞으로 작업하기 위해 `clone` 해 온 폴더를 보면, `_config`라는 YML파일이 있다. 이 파일은 블로그 테마의 전반적인 정책(?!)을 약속해놓은 파일인데 앞으로 많이 손댈 파일이다. 직관적으로 알아보기 쉬운 파일이라 수정하는데 어렵지는 않다.
-가장 먼저 바꿔준 것은 `Site settings` 영역이다. 여기에는 `title`, `subtitle`, `name` 등 기본적인 네이밍 설정을 하는 것들이 포함되어 있다. 뿐만 아니라 카테고리나 사이트 내 소개 이미지 등의 설정을 변경할 수 있으니 꼼꼼히 살펴보는 것이 좋다.
+가장 먼저 바꿔준 것은 `Site settings` 영역이다. 여기에는 `title`, `subtitle`, `name` 등 기본적인 네이밍 설정을 하는 것들이 포함되어 있다. 뿐만 아니라 카테고리나 사이트 내 소개 이미지 등의 설정을 변경할 수 있으니 꼼꼼히 살펴보는 것이 좋다.-->
 
 
 
