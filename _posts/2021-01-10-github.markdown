@@ -16,7 +16,7 @@ tags: github blog jekyll pagination
 
 ## 2. 페이지네이션을 만들어보자.
 
-1. _config.yml 수정
+#### 1. _config.yml 수정  
    ```
    gems:
    - jekyll-paginate
@@ -24,4 +24,7 @@ tags: github blog jekyll pagination
    paginate: 5
    paginate_path: "/page:num/"
    ```
-2. gemfile 수정
+#### 2. gemfile 수정  
+   ```
+   gem 'jekyll-paginate'
+   ```
