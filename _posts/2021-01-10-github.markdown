@@ -10,8 +10,18 @@ tags: github blog jekyll pagination
 
 ## 1. 현재 블로그 페이지네이션
 
-[!image](https://user-images.githubusercontent.com/30689295/104096181-45ab3e80-52de-11eb-8013-cff46e6267e9.png)  
+![image](https://user-images.githubusercontent.com/30689295/104096181-45ab3e80-52de-11eb-8013-cff46e6267e9.png)  
 
 이 지킬테마의 문제점은 블로그 메인에서 페이지네이션이 위와 같이 되어 있다는 점이다. 사실 뭐 얼마나 메인에서 페이지를 넘겨 볼까 하지만 그래도 이왕 제대로 된 페이지네이션을 가져 보자!
 
 ## 2. 페이지네이션을 만들어보자.
+
+1. _config.yml 수정
+   ```
+   gems:
+   - jekyll-paginate
+
+   paginate: 5
+   paginate_path: "/page:num/"
+   ```
+2. gemfile 수정
