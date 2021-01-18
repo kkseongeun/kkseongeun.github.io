@@ -39,3 +39,4 @@ IT 기획자 **김성은**입니다.
 피드백 환영합니다 :)
 
 - email : kkseongeun@gmail.com
+- 이력서 : [이력서 보러가기 >](https://www.notion.so/kkseongeun/Seongeun-Kim-ccb55a1481464ebfa3a473dabce7f446)

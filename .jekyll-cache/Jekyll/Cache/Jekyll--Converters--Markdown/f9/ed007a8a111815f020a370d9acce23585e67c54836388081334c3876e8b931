@@ -1,0 +1,17 @@
+I"�<h4 id="_configyml">_config.yml</h4>
+<p>지킬 블로그 설정하기 위한 기본적인 설정을 할 수 있는 파일</p>
+
+<h4 id="_includes">_includes</h4>
+<p>페이지 단위의 공통 컴포넌트를 이 폴더에 저장함</p>
+
+<h4 id="_layouts">_layouts</h4>
+<p>템플릿을 저장하는 폴더</p>
+
+<h4 id="_posts">_posts</h4>
+<p>포스팅을 저장하는 폴더</p>
+
+<h4 id="_sass">_sass</h4>
+<p>블로그 디자인을 위한 sass파일이 저장되어 있는 폴더</p>
+
+<h4 id="_site">_site</h4>
+:ET
