@@ -1,4 +1,4 @@
-I"�<p>애증의 이 깃허브 블로그.. 대학교 때 오픈소스 가지고 코딩하는 수업이 있었는데 그 때 좀 건들다가 방치하고, 취업 전에 포트폴리오 겸 공부 블로그로 써야지 했다가 덜컥 취업해버리고..
+I"�<p>애증의 이 깃허브 블로그.. 대학교 때 오픈소스 가지고 코딩하는 수업이 있었는데 그 때 좀 건들다가 방치하고, 취업 전에 포트폴리오 겸 공부 블로그로 써야지 했다가 덜컥 취업해버리고..
 그리고 맥북으로 노트북을 바꾸며 다시 환경을 갖추기로 마음 먹고 시작해본다. GO!!</p>
 
 <h2 id="1-개념정리">1. 개념정리</h2>
@@ -99,15 +99,15 @@
 (새로운 테마는 [centrarium](http://jekyllthemes.org/themes/centrarium/))
 
 ### css가 왕창 깨졌어요
-<img src="/assets/github1_1.png" title="github1_1" class="github1_1">
+<img src="http://kkseongeun.github.io/assets/github1_1.png" title="github1_1" class="github1_1">
 퍼블리싱 되긴 했는데 css가 왕창 깨져버려서 멘붕이 왔다. css가 왜 깨졌을까 찾아보니 `fork`하면서 경로가 달라질 수도 있다고 한다. 그래서 바로 확인해봤다.
 
-<img src="/assets/github1_2.png" title="github1_2" class="github1_2">
+<img src="http://kkseongeun.github.io/assets/github1_2.png" title="github1_2" class="github1_2">
 크롬 개발자도구로 확인을 해보니 빨간 에러 투성이.
 나에게 이러지 말아요..  
 에러를 파헤쳐보자!  
 
-<img src="/assets/github1_3.png" title="github1_3" class="github1_3">
+<img src="http://kkseongeun.github.io/assets/github1_3.png" title="github1_3" class="github1_3">
 - **문제점** : 개발자도구에서는 main.css가 centrarium/css 두 단계에 걸쳐서 있는데 내 깃허브에는 그냥 css 폴더 밑에 바로 파일이 있었다.
 나는 centrarium 파일이 쭉 없을 것이기 때문에 수정이 필요하다.
 
