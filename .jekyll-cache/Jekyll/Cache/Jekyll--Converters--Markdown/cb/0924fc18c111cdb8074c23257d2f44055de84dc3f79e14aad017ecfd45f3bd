@@ -1,0 +1,12 @@
+I"�<p>아 나는 깃허브 게시물 쓸 때 이미지 첨부하는게 세상에서 제일 짜증났다. 사실 이미지로 더 친절한 글을 쓰고 싶지만 캡쳐하고 첨부해서 올리려니 너무 귀찮고 짜증이 났다. 그래서 이미지를 어떻게 해야 가장 편리하게 첨부해서 글을 쓸 수 있을까 찾아봤다.</p>
+
+<hr />
+
+<h3 id="첫번째-방법">첫번째 방법</h3>
+<p>assets 폴더에 이미지를 넣은 후, 이 밑에 소스를 이용하여 첨부하기
+<code class="language-plaintext highlighter-rouge">&lt;img src="https://kkseongeun.github.io/assets/profile.jpg" title="Profile Picture" class="profile"&gt;</code>
+<img src="https://kkseongeun.github.io/assets/profile.jpg" title="Profile Picture" class="profile" /></p>
+
+<h3 id="두번째-방법">두번째 방법</h3>
+<p>깃허브 저장소의 Issue 탭에 이미지를 올리고 markdown이나 html 링크를 받아 게시물 파일에 첨부하기</p>
+:ET

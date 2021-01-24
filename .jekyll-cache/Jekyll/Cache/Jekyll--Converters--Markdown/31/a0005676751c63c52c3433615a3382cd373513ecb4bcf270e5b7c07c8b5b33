@@ -1,0 +1,122 @@
+I"<p>애증의 이 깃허브 블로그.. 대학교 때 오픈소스 가지고 코딩하는 수업이 있었는데 그 때 좀 건들다가 방치하고, 취업 전에 포트폴리오 겸 공부 블로그로 써야지 했다가 덜컥 취업해버리고..
+그리고 맥북으로 노트북을 바꾸며 다시 환경을 갖추기로 마음 먹고 시작해본다. GO!!</p>
+
+<h2 id="1-개념정리">1. 개념정리</h2>
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">github</code><br />
+ 개발자가 사용하는 버전관리 및 협업툴</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">github page</code><br />
+ github 저장소의 내용을 웹페이지로 구축해주는 서비스로, github 사용자들은 저장소에 push함으로써 누구나 간단하게 고유한 웹사이트 한 개를 가질 수 있다.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">jekyll</code><br />
+ 루비 기반의 정적인 웹사이트 생성기로, 쉽게 말해 html이나 markdown 파일을 읽고 웹사이트를 생성해준다. 단, 정적인 웹사이트이기 때문에 데이터베이스 등은 사용할 수 없지만 무료로 호스팅을 제공한다는 것이 굉장히 장점이 된다. 특히, 테마가 다양하여 마음에 드는 테마를 fork해서 커스터마이징하면 된다.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">ruby</code><br />
+ 루비는 동적 객체 지향 스크립트 언어이다. 지킬이 루비로 작성되어 있기 때문에 로컬 개발 환경을 위해서는 루비 설치가 필요하다. 맥에는 루비가 설치되어 있기 때문에 버전을 확인하고 업데이트된 루비 버전을 설치해주면 된다.</p>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Gem</code> : rubygems는 루비 패키지 관리자이고, 각 패키지를 gem 이라고 한다. 깃허브 블로그를 위해 설치할 수 있는 gem은 jekyll, bundler, github-page이다.</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="2-과정">2. 과정</h2>
+<p>아래 과정은 터미널에서 순차적으로 실행하면 됩니다요.</p>
+
+<h4 id="1-깃허브-저장소-만들기">1. 깃허브 저장소 만들기</h4>
+<p>깃허브에 들어가서 계정을 만들고 저장소를 만든다.<br />
+   1) repository name은 (username).github.io 로 되어 있다.<br />
+   2) 생성된 repository에서 setting &gt; github page 영역에서 “Your site is published at https://(username).github.io/” 라고 표시되어 초록색 체크까지 보이면 성공</p>
+
+<h4 id="2-ruby-설치">2. ruby 설치</h4>
+<p>mac은 기본적으로 루비가 설치되어 있지만 루비 버전이 낮아서 루비를 업데이트 해주거나 버전관리도구인 rbenv를 사용해준다.<br />
+   1) Homebrew 설치<br />
+   <a href="https://brew.sh/">https://brew.sh/</a> 에서 Install Homebrew 확인하여 Homebrew 설치<br />
+   2) rbenv 설치</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   $ brew install rbenv
+   $ rbenv init
+</code></pre></div></div>
+<p>brew install rbenv 은 자동으로 ruby-build를 같이 설치해주고, 이것으로 다른 루비 버전을 설치해줄 수 있다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   export PATH="$HOME/.rbenv/bin:$PATH"
+   eval "$(rbenv init -)"
+</code></pre></div></div>
+<p>zsh을 쓰는 경우 ~/.zshrc, 기본 bash를 쓰는 경우 ~/.bash_profile에 작성한다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   $ rbenv install (버전)
+   $ rbenv global (버전)
+   $ rbenv versions
+</code></pre></div></div>
+<p>최신버전을 확인해 설치하고 rbenv versions을 입력하여 설치된 버전을 확인한다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   $ rbenv rehash
+</code></pre></div></div>
+<p>rehash는 rbenv가 관리하는 루비 명령어들을 셸 스크립트 파일로 옮겨주는 역할을 한다.</p>
+
+<h4 id="3-jekyll과-bundler-설치">3. jekyll과 bundler 설치</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   $ gem install jekyll bundler
+   $ bundle update
+   $ bundle install
+</code></pre></div></div>
+
+<h4 id="4-로컬-서버에서-확인해보기">4. 로컬 서버에서 확인해보기</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   $ jekyll serve
+</code></pre></div></div>
+<ul>
+  <li>jekyll serve 하고 config.yml 파일을 로컬에서 확인할 경우 종료 후 다시 실행해야 반영됨</li>
+  <li>jekyll serve  종료 방법은 ctrl + C</li>
+</ul>
+
+<h4 id="5-jekyll-테마-선정">5. jekyll 테마 선정</h4>
+<p><a href="http://jekyllthemes.org/">http://jekyllthemes.org/</a> 에서 테마를 선정하고 해당 테마를 clone or download 한다. 그러면, 해당 테마 소스 폴더가 생기는데 터미널에서는 해당 폴더로 이동하여 깃 명령어로 배포하면 된다.</p>
+
+<h4 id="6-배포하기">6. 배포하기</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   $ cd kkseongeun.github.io
+   $ git init
+   $ git add .
+   $ git git status
+   $ git commit -m "commit message"
+   $ git push
+</code></pre></div></div>
+
+<hr />
+
+<!--주소는 그대로 쓰고 싶은데 이전 지킬테마가 마음에 들지 않아 새로 바꾸고 싶었다. 이 때부터 나의 삽질은 시작되었다.
+
+### 처음 내가 한 것
+1. 기존 저장소 삭제(^^)
+2. 마음에 드는 지킬 테마 `fork`
+3. 저장소 이름 다시 설정
+4. `clone`
+
+휴 여기서 문제! 저장소 이름(주소)을 다시 설정하는데 원래 있는 이름이라며 짠 하고 블로그의 테마가 수정되지 않았다. 이것 저것 하다보니 반영이 되었는데, 생각해보면 반영되는데 시간이 걸린 것 같기도 하다.
+(새로운 테마는 [centrarium](http://jekyllthemes.org/themes/centrarium/))
+
+### css가 왕창 깨졌어요
+<img src="https://kkseongeun.github.io/assets/github1_1.png" title="github1_1" class="github1_1">
+퍼블리싱 되긴 했는데 css가 왕창 깨져버려서 멘붕이 왔다. css가 왜 깨졌을까 찾아보니 `fork`하면서 경로가 달라질 수도 있다고 한다. 그래서 바로 확인해봤다.
+
+<img src="https://kkseongeun.github.io/assets/github1_2.png" title="github1_2" class="github1_2">
+크롬 개발자도구로 확인을 해보니 빨간 에러 투성이.
+나에게 이러지 말아요..  
+에러를 파헤쳐보자!  
+
+<img src="https://kkseongeun.github.io/assets/github1_3.png" title="github1_3" class="github1_3">
+- **문제점** : 개발자도구에서는 main.css가 centrarium/css 두 단계에 걸쳐서 있는데 내 깃허브에는 그냥 css 폴더 밑에 바로 파일이 있었다.
+나는 centrarium 파일이 쭉 없을 것이기 때문에 수정이 필요하다.
+
+- **해결방법** : 저장소의 _config.yml 에서 baseurl을 찾아 /centrarium 을 지워준 후 commit !
+
+
+### _config 파일 바꾸기
+
+우리가 앞으로 작업하기 위해 `clone` 해 온 폴더를 보면, `_config`라는 YML파일이 있다. 이 파일은 블로그 테마의 전반적인 정책(?!)을 약속해놓은 파일인데 앞으로 많이 손댈 파일이다. 직관적으로 알아보기 쉬운 파일이라 수정하는데 어렵지는 않다.
+가장 먼저 바꿔준 것은 `Site settings` 영역이다. 여기에는 `title`, `subtitle`, `name` 등 기본적인 네이밍 설정을 하는 것들이 포함되어 있다. 뿐만 아니라 카테고리나 사이트 내 소개 이미지 등의 설정을 변경할 수 있으니 꼼꼼히 살펴보는 것이 좋다.-->
+
+:ET

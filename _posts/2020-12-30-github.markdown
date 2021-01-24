@@ -79,7 +79,7 @@ tags: github blog jekyll
    - jekyll serve  종료 방법은 ctrl + C
   
 #### 5. jekyll 테마 선정
-   <http://jekyllthemes.org/> 에서 테마를 선정하고 해당 테마를 clone or download 한다. 그러면, 해당 테마 소스 폴더가 생기는데 터미널에서는 해당 폴더로 이동하여 깃 명령어로 배포하면 된다. 
+   <https://jekyllthemes.org/> 에서 테마를 선정하고 해당 테마를 clone or download 한다. 그러면, 해당 테마 소스 폴더가 생기는데 터미널에서는 해당 폴더로 이동하여 깃 명령어로 배포하면 된다. 
 
 #### 6. 배포하기
    ```
