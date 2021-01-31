@@ -21,7 +21,7 @@ description:
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
-baseurl: "https://kkseongeun.github.io" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://kkseongeun.github.io" #깃허브블로그 호스트 주소
 cover: "/assets/header_image.jpg"
 logo: "/assets/logo.png"
@@ -34,14 +34,14 @@ inter_post_navigation: false
 highlightjs_theme: "monokai-sublime"
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
-#jekyll-archives:
-#  enabled:
-#    - categories
-#    - tags
-#  layout: 'archive'
-#  permalinks:
-#    category: '/category/:name/'
-#    tag: '/tag/:name/'
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
 
 # Disqus comments
 # disqus_shortname: bencentra
@@ -50,12 +50,12 @@ highlightjs_theme: "monokai-sublime"
 # ga_tracking_id: "UA-XXXX-1"
 
 # Category descriptions (for archive pages)
-# descriptions:
-#  - cat: jekyll
-#    desc: "Posts describing Jekyll setup techniques."
+descriptions:
+  - cat: jekyll
+    desc: "Posts describing Jekyll setup techniques."
 
-#  - cat: dummy
-#    desc: "Just some placeholder posts, lorem ipsum and the rest."
+  - cat: dummy
+    desc: "Just some placeholder posts, lorem ipsum and the rest."
 
 # Social icons and sharing options
 #
