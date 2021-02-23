@@ -1,0 +1,40 @@
+I"3<h3 id="이미지-첨부하기">이미지 첨부하기</h3>
+
+<p>아 나는 지킬 블로그 게시물 쓸 때 이미지 첨부하는게 세상에서 제일 짜증났다. 사실 이미지를 사용해서 더 친절한 글을 쓰고 싶지만 캡쳐하고 첨부해서 올리려니 너무 귀찮고 짜증이 났다. 그래서 지킬에 이미지 첨부하는 방법을 정리해보려고 한다.</p>
+
+<h4 id="첫번째-방법--html-문법">첫번째 방법 : HTML 문법</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="/assets/profile.jpg" title="Profile Picture" class="profile"&gt;
+</code></pre></div></div>
+<p><img src="/assets/profile.jpg" title="Profile Picture" class="profile" /></p>
+
+<h4 id="두번째-방법--마크다운-문법">두번째 방법 : 마크다운 문법</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Image Alt Text](링크)
+</code></pre></div></div>
+<p><img src="https://user-images.githubusercontent.com/30689295/108803206-753baf00-75dd-11eb-8d53-44bdcf03c0bb.jpg" alt="image" /></p>
+
+<p>나는 주로 이 방법을 활용하는데, 깃허브 저장소의 Issue 탭에 이미지를 올리고 markdown 링크를 받아 게시물 파일에 첨부하면 된다.</p>
+
+<h4 id="이미지-사이즈-조정">이미지 사이즈 조정</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Image Alt Text](링크){: width="100" height="100"}
+</code></pre></div></div>
+<p><img src="https://user-images.githubusercontent.com/30689295/108803206-753baf00-75dd-11eb-8d53-44bdcf03c0bb.jpg" alt="image" width="100" height="100" /></p>
+
+<p>링크 뒤에 <code class="language-plaintext highlighter-rouge">{: width="" height=""}</code>를 추가해주고 큰따옴표 안에 숫자를 넣어주면 된다. 또는 <code class="language-plaintext highlighter-rouge">%</code>로 표현도 가능한데, 차지할 수 있는 크기를 100%로 보기 때문에 주의해서 설정해주면 된다.</p>
+
+<h4 id="이미지-사이즈가-바뀌지-않아요">이미지 사이즈가 바뀌지 않아요!</h4>
+<p>만약 테마를 클론해와서 블로그를 운영하고 있는 경우, 기본적으로 설정된 이미지 크기가 있기 때문에 바뀌지 않을 수 있다. 확인하려면, <code class="language-plaintext highlighter-rouge">_layout.scss</code>에 들어가서 설정된 값이 있는지 보면 된다. 나같은 경우에는 이미지 width 디폴트값이 설정되어 있었다. (아래 참고)</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>img {
+		display: block;
+		margin: auto;
+		width: 90%; //이 친구가 문제
+	}
+</code></pre></div></div>
+<p>깔꼼하게 주석처리 해주자^^</p>
+
+<hr />
+
+<h3 id="이미지-캡션달기">이미지 캡션달기</h3>
+
+<p><img src="https://user-images.githubusercontent.com/30689295/108803206-753baf00-75dd-11eb-8d53-44bdcf03c0bb.jpg" alt="image" width="300" height="300" /><em>캡션달기테스트</em></p>
+:ET
