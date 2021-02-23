@@ -250,7 +250,13 @@ pre code.hljs {
 	img {
 		display: block;
 		margin: auto;
-		width: 90%;
+		/*width: 90%;*/
+	}
+	img + em {
+		display: block;
+		text-align: center;
+		font-size: .8rem;
+		color: $medium-gray;
 	}
 	/*
 	*	Posts
