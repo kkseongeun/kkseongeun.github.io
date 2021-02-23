@@ -1,0 +1,72 @@
+I"s<h3 id="app-만들기">App 만들기</h3>
+<p>장고에서는 프로젝트 내부에 여러개의 app을 만들고 여러개의 기능을 구현할 수 있다. 내가 만들 app은 blog app!<br />
+역시나 cmd를 열어 내가 만든 start_django 프로젝트 폴더로 이동해 진행한다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">python manage.py startapp blog</code> 로 blog라는 앱을 만들고 <code class="language-plaintext highlighter-rouge">dir</code> 명령어로 확인해준다.</p>
+
+<p><strong>가장 큰 폴더인 start_django 라는 폴더는 프로젝트의 기본 폴더이며, 이 폴더 안에 blog라는 app이 존재하는 것</strong><br />
+<strong>큰 폴더 안에 들어있는 start_django라는 하위폴더는 프로젝트 전체에 대한 설정 파일들이 담겨있는 것</strong></p>
+
+<hr />
+
+<h3 id="첫-화면-만들기">첫 화면 만들기</h3>
+
+<h5 id="start_django--start_django--urlspy">start_django &gt; start_django &gt; urls.py</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from django.contrib import admin
+from django.urls import path, include
+ 
+urlpatterns = [
+    path('', include('blog.urls')),
+    path('admin/', admin.site.urls),
+]
+</code></pre></div></div>
+<ul>
+  <li>include 함수 import 함</li>
+  <li>path 함수를 활용해 첫 화면(아무것도 입력되지 않은 url)에서 blog의 urls를 참고하도록 함</li>
+</ul>
+
+<h5 id="start_django--blog--urlspy">start_django &gt; blog &gt; urls.py</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from django.urls import path
+from . import views
+ 
+urlpatterns = [
+    path('', views.index),
+]
+</code></pre></div></div>
+<ul>
+  <li>위와 같은 코드 작성해 새로운 파이썬 파일 만들기</li>
+  <li>화면을 보여줄 views 파일을 import하고 urlpatterns으로 아무것도 입력되지 않은 주소에서는 views의 index를 참고하도록 함</li>
+</ul>
+
+<h5 id="start_django--blog--viewspy">start_django &gt; blog &gt; views.py</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from django.shortcuts import render
+from django.http import HttpResponse
+ 
+# Create your views here.
+def index(request):
+    return HttpResponse("Main Screen!!!")
+</code></pre></div></div>
+<ul>
+  <li>HttpResponse라는 함수 import함</li>
+  <li>index라는 함수를 만들어 HttpResponse 함수를 통해 반환하도록 함</li>
+</ul>
+
+<hr />
+
+<h3 id="작은-팁">작은 팁</h3>
+<p><strong>cmd 명령어</strong></p>
+<ul>
+  <li>cd : 폴더 이동</li>
+  <li>dir : 폴더 확인</li>
+</ul>
+
+<p><strong>cmd에서 python 명령어</strong></p>
+<ul>
+  <li>python (파일이름) runserver : 서버 돌리기</li>
+  <li>서버 돌리고 웹브라우저에서 localhost:8000으로 접속해 화면 확인하기</li>
+</ul>
+
+:ET
