@@ -1,0 +1,20 @@
+I"�<h3 id="이미지-첨부하기">이미지 첨부하기</h3>
+
+<p>아 나는 지킬 블로그 게시물 쓸 때 이미지 첨부하는게 세상에서 제일 짜증났다. 사실 이미지를 사용해서 더 친절한 글을 쓰고 싶지만 캡쳐하고 첨부해서 올리려니 너무 귀찮고 짜증이 났다. 그래서 지킬에 이미지 첨부하는 방법을 정리해보려고 한다.</p>
+
+<h4 id="첫번째-방법--html-문법">첫번째 방법 : HTML 문법</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;img src="/assets/profile.jpg" title="Profile Picture" class="profile"&gt;
+</code></pre></div></div>
+<p><img src="/assets/profile.jpg" title="Profile Picture" class="profile" /></p>
+
+<h4 id="두번째-방법--마크다운-문법">두번째 방법 : 마크다운 문법</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![image](https://user-images.githubusercontent.com/30689295/108802564-014cd700-75dc-11eb-824a-e13714f5dfe7.png)
+</code></pre></div></div>
+<p><img src="https://user-images.githubusercontent.com/30689295/108802564-014cd700-75dc-11eb-824a-e13714f5dfe7.png" alt="image" />
+나는 주로 이 방법을 활용하는데, 깃허브 저장소의 Issue 탭에 이미지를 올리고 markdown 링크를 받아 게시물 파일에 첨부하면 된다.</p>
+
+<hr />
+
+<h3 id="이미지-캡션달기">이미지 캡션달기</h3>
+:ET
